@@ -1,4 +1,9 @@
 library(foreign)
+library(sp)
+library(rgdal)
+library(sm)
+library(shapefiles)
+library(rgeos)
 
 
 data <- read.dta(file="data/school_data_complete.dta")
@@ -41,6 +46,8 @@ plot(costa_rica_cantones,border=rgb(0,0,0,0.2))
 plot(costa_rica_provincia,add=TRUE,border=rgb(0,0,0,0.4))
 points(data_2007_colegios_control$longitud,data_2007_colegios_control$latitud,pch=20,col=rgb(0,0,.5,0.2))
 points(centro_educativo$longitud,centro_educativo$latitud,pch=20,col=rgb(1,0,0,1))
+
+
 
 
 
